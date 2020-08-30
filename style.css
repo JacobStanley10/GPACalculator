@@ -17,6 +17,9 @@ h2{
   position: absolute;
   margin-bottom: 10px
 }
+a{
+  color:black;
+}
 @media only screen and (max-width: 767px) {
   input,.form-control{
     display : inline-block !important;
