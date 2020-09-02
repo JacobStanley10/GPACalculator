@@ -2,6 +2,9 @@ body{
   padding: 50px;
   background-color: #008080;
  }
+input{
+  width:200px;
+}
  h1{
   padding: 10px;
   margin-bottom: 30px;
@@ -19,6 +22,9 @@ h2{
 }
 a{
   color:black;
+}
+button{
+  width:250px;
 }
 @media only screen and (max-width: 767px) {
   input,.form-control{
