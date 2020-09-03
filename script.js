@@ -10,12 +10,7 @@ var secondCredit = document.getElementById('secondCredit');
 var thirdCredit = document.getElementById('thirdCredit');
 var fourthCredit = document.getElementById('fourthCredit');
 
-var arrayOfAllInputs = [first, second, third, fourth];
-var arrayOfGrades = [];
-var arrayOfCreditsInitial = [firstCredit, secondCredit, thirdCredit, fourthCredit];
-var arrayOfCreditsFinal = [];
 var testCount = document.getElementById('testCount');
-
 
 var result = document.getElementById('result');
 
@@ -43,27 +38,25 @@ return gradePoint;
 }
 
 function sum() {
+var arrayOfAllInputs = [first, second, third, fourth];
+var arrayOfCreditsInitial = [firstCredit, secondCredit, thirdCredit, fourthCredit];
+var arrayOfGrades = [];
+var arrayOfCreditsFinal = [];
 for(i = 0; i < arrayOfAllInputs.length; i++){
   if((arrayOfAllInputs[i].value != 0) && (arrayOfCreditsInitial[i] != 0)){
-    arrayOfGrades.push(arrayOfAllInputs[i]);
-    arrayOfCreditsFinal.push(arrayOfCreditsInitial[i]);
+    arrayOfGrades.push(arrayOfAllInputs[i].value);
+    arrayOfCreditsFinal.push(arrayOfCreditsInitial[i].value);
   }
 }
 var totalInputs = arrayOfGrades.length;
 var totalGradePoint = hiddenInputOfPrevGPA.value * hiddenInputOfPrevCredits.value;
-var totalCredits = hiddenInputOfPrevCredits.value;
-//upperCaseAndGradePoint(arrayOfGrades[0].value) * arrayOfCreditsFinal[0].value;
+var totalCredits = parseInt(hiddenInputOfPrevCredits.value);
 for(i = 0; i < totalInputs; i++){
-totalGradePoint+=(upperCaseAndGradePoint(arrayOfGrades[i].value)) * arrayOfCreditsFinal[i].value;
-// testCount.innerHTML = totalCredits + arrayOfCreditsFinal[i].value;
-totalCredits+=arrayOfCreditsFinal[i].value;
-
-  //"Total Credits: " + totalCredits + " Total Grade Point: " + totalGradePoint;
+totalGradePoint = totalGradePoint + (upperCaseAndGradePoint(arrayOfGrades[i])) * parseInt(arrayOfCreditsFinal[i]);
+totalCredits = parseInt(totalCredits) + parseInt(arrayOfCreditsFinal[i]);
+// testCount.innerHTML =  "Total Credits: " + totalCredits + " Total Grade Point: " + totalGradePoint;
 } 
 var GPA = totalGradePoint/totalCredits;
 
 result.innerHTML = "Your GPA is : " + GPA;
-if(isNaN(GPA)){
-  test.innerHTML = "Please enter valid letter grades as inputs";
-}
 }
