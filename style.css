@@ -1,7 +1,8 @@
 body{
   padding: 50px;
-  background-color: #008080;
- }
+  background-image: url("Images/GPABackground.jpg");
+/*  background-color: #008080;
+*/ }
 input{
   width:200px;
 }
@@ -16,6 +17,7 @@ h5{
 }
 h2{
   font-size: 20px;
+  color: white;
 }
 #footer{
   position: absolute;

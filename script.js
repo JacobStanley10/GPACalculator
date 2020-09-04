@@ -42,6 +42,8 @@ var arrayOfAllInputs = [first, second, third, fourth];
 var arrayOfCreditsInitial = [firstCredit, secondCredit, thirdCredit, fourthCredit];
 var arrayOfGrades = [];
 var arrayOfCreditsFinal = [];
+var totalGradePoint;
+var totalCredits;
 for(i = 0; i < arrayOfAllInputs.length; i++){
   if((arrayOfAllInputs[i].value != 0) && (arrayOfCreditsInitial[i] != 0)){
     arrayOfGrades.push(arrayOfAllInputs[i].value);
@@ -49,8 +51,14 @@ for(i = 0; i < arrayOfAllInputs.length; i++){
   }
 }
 var totalInputs = arrayOfGrades.length;
-var totalGradePoint = hiddenInputOfPrevGPA.value * hiddenInputOfPrevCredits.value;
-var totalCredits = parseInt(hiddenInputOfPrevCredits.value);
+if(hiddenInputOfPrevGPA.value.length == 0 && hiddenInputOfPrevCredits.value.length == 0){
+  totalGradePoint = 0;
+  totalCredits = 0;
+}
+else{
+  totalGradePoint = hiddenInputOfPrevGPA.value * hiddenInputOfPrevCredits.value;
+  totalCredits = parseInt(hiddenInputOfPrevCredits.value);
+}
 for(i = 0; i < totalInputs; i++){
 totalGradePoint = totalGradePoint + (upperCaseAndGradePoint(arrayOfGrades[i])) * parseInt(arrayOfCreditsFinal[i]);
 totalCredits = parseInt(totalCredits) + parseInt(arrayOfCreditsFinal[i]);
