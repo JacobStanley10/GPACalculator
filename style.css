@@ -8,6 +8,7 @@ input{
  h1{
   padding: 10px;
   margin-bottom: 30px;
+  color: white;
  }
 h5{
   padding: 10px;
@@ -21,7 +22,7 @@ h2{
   margin-bottom: 10px
 }
 a{
-  color:black;
+  color:white;
 }
 button{
   width:250px;
