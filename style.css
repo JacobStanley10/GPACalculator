@@ -1,6 +1,8 @@
 body{
   padding: 50px;
-  background-image: url("Images/GPABackground.jpg");
+  background-image: url("Images/PencilBackground.jpg");
+  position: absolute;
+  width:100%;
 /*  background-color: #008080;
 */ }
 input{
