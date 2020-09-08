@@ -1,6 +1,9 @@
 body{
   padding: 50px;
-  background-image: url("Images/PencilBackground.jpg");
+  background: url("Images/SchoolBackgroundGray.jpg");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   position: absolute;
   width:100%;
   background-size: cover;
@@ -30,8 +33,9 @@ a{
   color:white;
 }
 button{
+  padding: 0;
   background-color: transparent;
-  border: 0;
+  border: none;
   color: #fefbef;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
