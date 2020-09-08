@@ -30,13 +30,23 @@ a{
   color:white;
 }
 button{
-  width:250px;
+  background-color: transparent;
+  border: 0;
+  color: #fefbef;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  line-height: 1;
+  margin-top: 1.5rem;
+  width: 100%;
+  /*width:250px;
+  color:red;*/
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
+  /* For Mobile: */
   input,.form-control{
-    display : inline-block !important;
-    width: 300px !important;
-    margin-bottom: 15px !important;
+    /*display : inline-block !important;*/
+    width: 250px !important;
+    /*margin-bottom: 15px !important;*/
   }
   h2{
     font-size : 20px;
